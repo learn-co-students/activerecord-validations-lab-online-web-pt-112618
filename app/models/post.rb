@@ -6,6 +6,6 @@ class Post < ActiveRecord::Base
   validates :summary, length: { maximum: 250 }
   validates :category, inclusion: { in: %w(Fiction, Non-fiction) }
   #validates :title, inclusion: { in: %w("Won't Believe", "Secret", "Top [number]", "Guess") }
-  validates :title, :inclusion => { in: => %w('Wont Believe', 'Secret', 'Top [number]', 'Guess'),
-      :message => "%{value} does not include keywords" }
+  validates :title, inclusion: { in: %w('Wont Believe', 'Secret', 'Top [number]', 'Guess'
+      :message => "%{value} does not include keywords") }
 end
